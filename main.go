@@ -24,5 +24,3 @@ func main() {
 	kubernetesClient := getKubernetesClient(authInCluster, *kubernetesContext)
 	updateSecretManagerSecret(getSecretManagerClient(), *awsSecretARN, GetSecretData(kubernetesClient, *namespace, *secretName))
 }
-
-//"arn:aws:secretsmanager:us-east-1:410715645895:secret:non-prod-notification-service-dev-creds-15Kr99"
